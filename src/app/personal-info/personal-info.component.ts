@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { GithubService } from '../github.service';
+import { User } from '../user';
 
 @Component({
   selector: 'app-personal-info',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonalInfoComponent implements OnInit {
 
-  constructor() { }
+  user$: Observable<User> | undefined;
+
+  constructor(private githubService: GithubService) { }
 
   ngOnInit(): void {
+    this.user$ = this.githubService.getUser();
   }
 
 }
