@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "gh-portfolio": {
+      "hosting": {
+        "gh-portfolio": [
+          "gh-portfolio"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "gh-portfolio"
+  }
+}
